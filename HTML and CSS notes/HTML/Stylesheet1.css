@@ -1,5 +1,6 @@
 ﻿body {
-    background-color: rgb(254, 201, 255);
+    background-color: rgb(232, 218, 249);
+    color: rgb(48, 1, 30);
 }
 
 /*Home-only styles*/
@@ -7,11 +8,11 @@
     list-style-type: none;
     width: 20%;
     padding: 20px;
-    border: 5px dashed steelblue;
+    border: 5px dashed rgb(169, 126, 168);
 }
 
 .home-li {
-    background-color: lightsteelblue;
+    background-color: rgb(209, 177, 206);
     margin: 5px;
     text-align: center;
 }
@@ -19,29 +20,24 @@
 .big-link {
     text-decoration: none;
     font-size: 50px;
-    color: rgb(156, 2, 109);
+    color: rgb(48, 1, 30);
 }
 
     .big-link:hover {
-        color: rgb(227, 30, 167);
+        color: rgb(169, 126, 168);
     }
 
 /*Classes for sub-home lists*/
 .big-ul {
     list-style-type: none;
     padding: 20px;
-    border: 5px dashed steelblue;
-    width: 20%; 
+    border: 5px dashed rgb(169, 126, 168);
+    width: 20%;
 }
 
 .sub-home-li {
-    background-color: lightsteelblue;
+    background-color: rgb(209, 177, 206);
     margin: 5px;
-    text-align: center;
-}
-
-.highlighter {
-    background-color: lightsteelblue;
     text-align: center;
 }
 
@@ -49,37 +45,37 @@
 .medium-link {
     text-decoration: none;
     font-size: 25px;
-    color: rgb(156, 2, 109);
+    color: rgb(48, 1, 30);
 }
     .medium-link:hover {
-    color: rgb(227, 30, 167);
+        color: rgb(169, 126, 168);
     }
 
 
 .small-link {
     text-decoration: none;
     font-size: 20px;
-    color: rgb(156, 2, 109);
+    color: rgb(48, 1, 30);
 }
     .small-link:hover {
-        color: rgb(227, 30, 167);
+        color: rgb(169, 126, 168);
     }
 
 /*Classes for paragraphs*/
 .code {
-    color: rgb(0, 125, 94);
-    border: 2px dashed rgb(0, 125, 94);
-    background-color: rgb(207, 250, 239);
+    color: rgb(138, 106, 108);
+    border: 2px dashed rgb(138, 106, 108);
+    background-color: rgb(217, 191, 197);
     padding: 10px;
     width: 50%;
 }
 .code-within-text {
-    color: rgb(0, 125, 94);
+    color: rgb(138, 106, 108);
 }
 .working-code {
-    color: steelblue;
-    border: 2px dashed steelblue;
-    background-color: rgb(201, 225, 255);
+    color: rgb(169, 126, 168);
+    border: 2px dashed rgb(169, 126, 168);
+    background-color: rgb(209, 177, 206);
     padding: 10px;
     width: 50%;
 }
