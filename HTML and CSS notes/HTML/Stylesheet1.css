@@ -13,6 +13,7 @@
 .home-li {
     background-color: lightsteelblue;
     margin: 5px;
+    text-align: center;
 }
 
 .big-link {
@@ -28,14 +29,20 @@
 /*Classes for sub-home lists*/
 .big-ul {
     list-style-type: none;
-    width: 20%;
     padding: 20px;
     border: 5px dashed steelblue;
+    width: 20%; 
 }
 
 .sub-home-li {
     background-color: lightsteelblue;
     margin: 5px;
+    text-align: center;
+}
+
+.highlighter {
+    background-color: lightsteelblue;
+    text-align: center;
 }
 
 /*Classes for links*/
@@ -64,6 +71,7 @@
     border: 2px dashed rgb(0, 125, 94);
     background-color: rgb(207, 250, 239);
     padding: 10px;
+    width: 50%;
 }
 .code-within-text {
     color: rgb(0, 125, 94);
@@ -73,4 +81,5 @@
     border: 2px dashed steelblue;
     background-color: rgb(201, 225, 255);
     padding: 10px;
+    width: 50%;
 }
