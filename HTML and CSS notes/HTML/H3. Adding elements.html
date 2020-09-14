@@ -7,6 +7,62 @@
     <title>Notes of the self-taught</title>
 </head>
 <body>
+    <h1>Adding elements to the website</h1>
+    <h2>Links</h2>
+    To add navitation to some page in the same directory:
+    <div class="code">&lt;a href="Home.html"&gt;Home&lt;/a&gt;</div>
+    <br />
+    <div class="working-code"><a href="Home.html">Home</a></div>
+    <br />
+    To create a link which opens in the current tab:
+    <div class="code">&lt;a href="https://www.google.com"&gt;Google's Homepage&lt;/a&gt;</div>
+    <br />
+    <div class="working-code"><a href="https://www.google.com">Google's Homepage</a></div>
+    <br />
+    To create a link which opens in a new tab:
+    <div class="code">&lt;a href="https://www.google.com" <b>target="_blank"</b>&gt;Google's Homepage&lt;/a&gt;</div>
+    <br />
+    <div class="working-code"><a href="https://www.google.com" target="_blank">Google's Homepage</a></div>
+    <br />
 
+    <h2>Images</h2>
+    <h3>Setting width&height, alt attribute</h3>
+    You will notice width attribute in the code boxes of this section. These values are pixels.
+    You may add both width and height, but it's good to keep the ratio, so the pictures don't get smushed.
+    If you set only one value (either width or height), the other one will scale automatically.
+    <br /><br />
+    The <span class="code-within-text">alt</span> attribute is a text that will appear when an image cannot be found.  
+    
+    <h3>Adding images</h3>
+    To add an image from own pc:
+    <div class="code">&lt;img src="media/Small Onyx.jpg" img width="300" <b>alt</b>="A really cute rat"&gt;</div>
+    <br />
+    <div class="working-code"><img src="media/Small Onyx.jpg" img width="300" alt="A really cute rat"></div>
+    <br />
+    To link a picture from the Internet:
+    <div class="code">&lt;img src="https://i.pinimg.com/originals/f7/40/17/f7401734665945e1a573ec5e7ca0edba.jpg" width="300" <b>alt</b>="A really cute dumbo rat"&gt;</div>
+    <br />
+    <div class="working-code"><img src="https://i.pinimg.com/originals/f7/40/17/f7401734665945e1a573ec5e7ca0edba.jpg" width="300" alt="A really cute dumbo rat"></div>
+    <br />
+    To use an image as a link:
+    <div class="code">&lt;a href="https://www.google.com target="_blank""&gt;&lt;img src="media/Small Lapis.jpg" img width ="300" alt="A really cute rat"&gt;&lt;/a&gt;</div>
+    <br />
+    <div class="working-code"><a href="https://www.google.com" target="_blank"><img src="media/Small Lapis.jpg" img width="300" alt="A really cute rat"></a></div>
+    <br />
+
+    <h2>Videos</h2>
+    To add a video from own pc:
+    <div class="code">&lt;video src="" poster="ThumbnailImage.jpg" controls width="500"&gt;Here we put the text that will display if video fails to play.&lt;/video&gt;</div>
+    <br />
+    <div class="working-code"><video src="media/Hello rat.mp4" poster="media/Thumbnail.jpg" controls width="500">Here we put the text that will display if video fails to play.</video></div>
+    The <span class="code-within-text">controls</span> creates browser default controls, so it's really important to add it.
+    <br /><br />
+    To add a video from YouTube you go to the video, click Share → Embed and copy the code from there. Example of a copied code:
+    <div class="code">&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/lw_95WzLk7U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</div>
+    <br />
+    <div class="working-code"><iframe width="560" height="315" src="https://www.youtube.com/embed/lw_95WzLk7U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <br />
+    <hr />
+    <a href="H0. HTML Home.html" class="small-link">Click here to return</a>
 </body>
 </html>
