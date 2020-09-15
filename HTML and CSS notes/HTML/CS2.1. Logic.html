@@ -113,13 +113,78 @@
         <br />
         true
     </div>
-
-
-
-
     <br />
+
+    <h2>If</h2>
+    The basic idea of "if" statement is presented below:
+    <div class="code-within-text">
+        if (this condition is true)<br />
+        &emsp;{<br />
+        &emsp;&emsp;Execute this code block<br />
+        &emsp;}<br />
+        else if (this condition is true)<br />
+        &emsp;{<br />
+        &emsp;&emsp;Execute this code block<br />
+        &emsp;}<br />
+        else<br />
+        &emsp;{<br />
+        &emsp;&emsp;If none of the above conditions returned true, execute this code block<br />
+        &emsp;}
+    </div>
+    Examples of use can be found in the <a href="CS3. Challenges.html" class="small-link">Challenges</a>.
     <br />
-    <hr />
-    <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
+
+    <h2>Conditional operator ?:;</h2>
+    This works a little bit like a simplified "if" statement. The basic idea is presented below:
+    <div class="code-within-text">
+        &lt;evaluate this condition&gt; ? &lt;if condition is true, return this value&gt; : &lt;if condition is false, return this value&gt;
+    </div>
+    Example:
+    <div class="code">
+        int totalPrice = 1001;<br />
+        int discount = totalPrice > 1000 ? 100 : 50;<br />
+        Console.WriteLine($"The discount is {discount}$.");<br />
+    </div>
+    <br />
+    <div class="working-code">
+        The discount is 100$.
+    </div>
+    <br />
+
+    <h2>Switch </h2>
+    <div class="code">
+        int number = 3;<br />
+        string letter = "";<br /><br />
+
+        switch (number)<br />
+        {<br />
+        &emsp;case 1:<br />
+        &emsp;&emsp;letter = "a";<br />
+        &emsp;&emsp;break;<br />
+        &emsp;case 2:<br />
+        &emsp;&emsp;letter = "b";<br />
+        &emsp;&emsp;break;<br />
+        &emsp;case 3:<br />
+        &emsp;&emsp;letter = "c";<br />
+        &emsp;&emsp;break;<br />
+        &emsp;case 4:<br />
+        &emsp;&emsp;letter = "d";<br />
+        &emsp;&emsp;break;<br />
+        }<br />
+        Console.WriteLine($"The letter corresponding to the number is: {letter}.");
+    </div>
+<br />
+<div class="working-code">
+    The letter corresponding to the number is: c.
+</div>
+
+
+
+
+
+                <br />
+                <br />
+                <hr />
+                <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
 </body>
 </html>
