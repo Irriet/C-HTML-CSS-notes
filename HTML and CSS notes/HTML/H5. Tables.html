@@ -7,8 +7,111 @@
     <title>Notes on HTML - Tables</title>
 </head>
 <body>
+    <h1>Tables</h1>
+    The basic tags showed in the example below create a table without any borders.<br />
+    To add a border, simply add value for the <span class="code-within-text">border</span> attribute in your stylesheet, like this one:
+    <div class="code">
+        table, th, td {<br />
+        border: 1px solid rgb(34, 34, 59);<br />
+        }
+    </div>
+    <br />
+    Table code:
+    <br />
+    <div class="code">
+        &lt;table&gt;<br />
+        &emsp;&lt;caption&gt;<br />
+        &emsp;&emsp;&lt;h3&gt;Basic logic operators&lt;/h3&gt;<br />
+        &emsp;&lt;/caption&gt;<br />
+        &emsp;&lt;thead&gt;<br />
+        &emsp;&emsp;&lt;tr&gt;<br />
+        &emsp;&emsp;&emsp;&lt;th>Operator&lt;/th&gt;<br />
+        &emsp;&emsp;&emsp;&lt;th>What it means&lt;/th&gt;<br />
+        &emsp;&emsp;&emsp;&lt;th>Code example or notes&lt;/th&gt;<br />
+        &emsp;&emsp;&lt;/tr&gt;<br />
+        &emsp;&lt;/thead&gt;<br />
+        &emsp;&lt;tbody&gt;<br />
+        &emsp;&emsp;&lt;tr&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td&gt;==&lt;/td&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td&gt;equality&lt;/td&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td&gt;A&lt;/td&gt;<br />
+        &emsp;&emsp;&lt;/tr&gt;<br />
+        &emsp;&emsp;&lt;tr&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td>!=&lt;/td&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td>inequality&lt;/td&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td>&lt;/td&gt;<br />
+        &emsp;&emsp;&lt;/tr&gt;<br />
+        &emsp;&emsp;&lt;tr&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td>!bool&lt;/td&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td>bool value false&lt;/td&gt;<br />
+        &emsp;&emsp;&emsp;&lt;td>B&lt;/td&gt;<br />
+        &emsp;&emsp;&lt;/tr&gt;<br />
+        &emsp;&lt;/tbody&gt;<br />
+        &lt;/table&gt;<br />
+    </div>
+    <br />
 
-
+    <div class="working-code">
+    <table>
+        <caption>
+            <h3>Basic logic operators</h3>
+        </caption>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>What it means</th>
+                <th>Code example or notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>==</td>
+                <td>equality</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>inequality</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>!bool</td>
+                <td>bool value false</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>greater than</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>less than</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>greater than or equal</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>less than or equal</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&&</td>
+                <td>and</td>
+                <td>for connecting conditions</td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>or</td>
+                <td>if one or another condition is true</td>
+            </tr>
+        </tbody>
+    </table>
+        </div>
     <br />
     <hr />
     <a href="H0. HTML Home.html" class="small-link">Click here to return</a>
