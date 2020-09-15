@@ -7,9 +7,117 @@
     <title>Notes on C# - Logic</title>
 </head>
 <body>
+    <h1>Logic</h1>
+    <h2>Operators</h2>
+    <p>
+        For writing any logic code it's important to know the basic operators,
+        so the program understands whether you want the values to be equal,
+        not equal, greater or less than another one and so on.
+        Below some basic operators are presented.
+    </p>
+    <table>
+        <caption>
+            <h3>Basic logic operators</h3>
+        </caption>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>What it means</th>
+                <th>Code example or notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>==</td>
+                <td>equality</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>inequality</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>!bool</td>
+                <td>bool value false</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>greater than</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>less than</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>greater than or equal</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>less than or equal</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>&&</td>
+                <td>and</td>
+                <td>for connecting conditions</td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>or</td>
+                <td>if one or another condition is true</td>
+            </tr>
+        </tbody>
+    </table>
+    <h3>Code examples</h3>
+    <h4>A:</h4>
+    <div class="code">
+        Console.WriteLine("a" == "a");
+        <br />
+        Console.WriteLine("a" == "A");
+        <br />
+        Console.WriteLine(1 == 2);
+        <br />
+        <br />
+        string value = "a";
+        <br />
+        Console.WriteLine(value == "a");
+    </div>
+    <br />
+    <div class="working-code">
+        true
+        <br />
+        false
+        <br />
+        false
+        <br />
+        <br />
+        true
+    </div>
+    <h4>B:</h4>
+    <div class="code">
+        string sentence = "Oreo is a cat.";
+        <br />
+        Console.WriteLine(sentence.Contains("rat") == false);
+        <br />
+        Console.WriteLine(!sentence.Contains("rat"));
+    </div>
+    <br />
+    <div class="working-code">
+        true
+        <br />
+        true
+    </div>
 
 
 
+
+    <br />
     <br />
     <hr />
     <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
