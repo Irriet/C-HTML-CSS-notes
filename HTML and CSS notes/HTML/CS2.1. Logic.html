@@ -135,6 +135,43 @@
     </div>
     <br />
 
+    <h2>Recursion</h2>
+    <p>
+        Recursion occurs when a method calls itself. You need to remember to terminate the method
+        at some point, so a condition that will be fulfilled at some point is needed.<br />
+        An example of recursive method can be a code that sums up numbers from 1 to n.
+    </p>
+    <div class="code">
+        class Program<br />
+        {<br />
+        &emsp;static void Main(string[] args)<br />
+        &emsp;{<br />
+        &emsp;&emsp;&emsp;Console.WriteLine(recursiveSum(5));<br />
+        &emsp;}<br />
+        &emsp;public static int recursiveSum(int n)<br />
+        &emsp;{<br />
+        &emsp;&emsp;if (n <= 1)<br />
+        &emsp;&emsp;{<br />
+        &emsp;&emsp;&emsp;return n;<br />
+        &emsp;&emsp;}<br />
+        &emsp;&emsp;else<br />
+        &emsp;&emsp;{<br />
+        &emsp;&emsp;&emsp;return (n + recursiveSum(n - 1));<br />
+        &emsp;&emsp;}<br />
+        &emsp;}<br />
+        }<br />
+    </div>
+    <br />
+    <div class="working-code">15</div>
+    <br />
+    The train of thought here would be:
+    <p>
+        n = 5, so n <= 1 isn't true, therefore the program goes to the <span class="code-within-text">else</span> block.
+        n + recursiveSum(n-1) in case of 5 means 5 + recursiveSum(4). recursiveSum(4) is 4 + recursiveSum(3) and so on.
+        It keeps going until it reaches n = 1. The whole code ends up resulting in 5 + 4 + 3 + 2 + 1.
+    </p>
+        <br />
+
     <h2>Conditional operator ?:;</h2>
     This works a little bit like a simplified "if" statement. The basic idea is presented below:
     <div class="code-within-text">

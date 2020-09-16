@@ -10,16 +10,79 @@
     <h1>Loops</h1>
 
     Examples of logic statements use can be found in the <a href="CS3. Challenges.html" class="small-link">Challenges</a>.
-    
+    <br />
+    <h3>The difference between loops</h3>
+    <ul>
+        <li>foreach - executes once for each element in the data sequence, like an <a href="CS2.4. Arrays.html" class="small-link">array</a></li>
+        <li>
+            for - executes the code a certain number of times.
+            For enables changing the value of the variable and iterating through an array backwards.
+        </li>
+        <li>while - executes till a certain condition is met</li>
+        <li>do-while - very similar to while with one difference: it is always executed once, before the conditions are verified</li>
+    </ul>
+
     <h2>Foreach</h2>
+    <div class="code">
+        string[] petNames = { "Ruby", "Lapis", "Onyx" };<br />
+        foreach (string name in petNames)<br />
+        {<br />
+        Console.WriteLine(name);<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        Ruby<br />Lapis<br />Onyx
+    </div>
+    <br />
+    Instead of variable type name (here <span class="code-within-text"><b>string</b> name</span>) you can use <span class="code-within-text">var</span>
+    keyword to let the compiler decide what is it.
+    <br />
 
     <h2>For</h2>
+    Consists of the following elements:<br />
+    <span class="code-within-text">for (initiator; condition; iterator)</span><br />
+    <p>
+        <b>Initializer</b> is a variable that is initialized.
+        <b>Condition</b> defines the loop completion condition.
+        <b>Iterator</b> defines the action that is to be taken after each iteration.
+        And then in the { } is the <b>body</b> - a block of code that will be executed for each iteration.
+    </p>
+    <p>Below you can find the simplest example of the <span class="code-within-text">for</span> loop. 
+    It includes the <span class="code-within-text">break</span> keyword. 
+    You can read more about this a bit below in the last sub-section.</p>
+    <div class="code">
+        for (int i = 0; i < 10; i++)<br />
+        {<br />
+        Console.WriteLine(i);<br />
+        if (i == 7) break;<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        1<br />2<br />3<br />4<br />5<br />6<br />7
+    </div>
+    <br />
+    To reverse an array with the <span class="code-within-text">for</span> loop:<br />
+    <div class="code">
+        string[] petNames = { "Ruby", "Lapis", "Onyx", "Piszczek", "Kropek", "Oreo" };<br />
+        for (int i = petNames.Length - 1; i >= 0; i--)<br />
+        {<br />
+        Console.WriteLine(petNames[i]);<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        Oreo<br />Kropek<br />Piszczek<br />Onyx<br />Lapis<br />Ruby
+
+    </div>
+    <br />
 
     <h2>While & Do-While</h2>
 
     <h2>Break & Continue</h2>
 
-
+    
 
     <br />
     <hr />
