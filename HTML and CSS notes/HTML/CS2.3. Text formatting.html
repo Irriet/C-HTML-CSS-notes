@@ -8,7 +8,64 @@
 </head>
 <body>
     <h1>Text formatting</h1>
-    <h2>Basic text formatting</h2>
+    <h2>Basic text formatting (character escapes)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Character or sequence</th>
+                <th>What it does</th>
+                <th>Code example</th>
+                <th>Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>\n</td>
+                <td>New line</td>
+                <td class="code-in-table" style="text-align: left">Console.WriteLine("Hello\nWorld!");</td>
+                <td class="working-code-in-table" style="text-align: left">Hello<br />World!</td>
+            </tr>
+            <tr>
+                <td>\t</td>
+                <td>Tab</td>
+                <td class="code-in-table" style="text-align: left">Console.WriteLine("Hello \tWorld!");</td>
+                <td class="working-code-in-table" style="text-align: left">Hello &emsp;World!</td>
+            </tr>
+            <tr>
+                <td>\</td>
+                <td>Allows typing characters that are not recognized as escaped characters, like \ or ""</td>
+                <td class="code-in-table" style="text-align: left">Console.WriteLine("c:\\source\\repos");</td>
+                <td class="working-code-in-table" style="text-align: left">c:\source\repos</td>
+            </tr>
+            <tr>
+                <td>@</td>
+                <td>Creates literal string</td>
+                <td class="code-in-table" style="text-align: left">Console.WriteLine(@"&emsp;Tab here. 
+                Tab there. &emsp; Tabs, new lines and / \ / \ symbols are displayed&emsp;.");</td>
+                <td class="working-code-in-table" style="text-align: left">
+                    &emsp;Tab here.
+                    Tab there. &emsp; Tabs, new lines and / \ / \ symbols are displayed&emsp;.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <h2>Methods for strings</h2>
     
