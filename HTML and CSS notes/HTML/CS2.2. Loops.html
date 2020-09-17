@@ -13,7 +13,10 @@
     <br />
     <h3>The difference between loops</h3>
     <ul>
-        <li>foreach - executes once for each element in the data sequence, like an <a href="CS2.4. Arrays.html" class="small-link">array</a></li>
+        <li>
+            foreach - executes once for each element in the data sequence, like an <a href="CS2.4. Arrays.html" class="small-link">array</a>.
+            With foreach you can't reassign a variable's value.
+        </li>
         <li>
             for - executes the code a certain number of times.
             For enables changing the value of the variable and iterating through an array backwards.
@@ -48,9 +51,11 @@
         <b>Iterator</b> defines the action that is to be taken after each iteration.
         And then in the { } is the <b>body</b> - a block of code that will be executed for each iteration.
     </p>
-    <p>Below you can find the simplest example of the <span class="code-within-text">for</span> loop. 
-    It includes the <span class="code-within-text">break</span> keyword. 
-    You can read more about this a bit below in the last sub-section.</p>
+    <p>
+        Below you can find the simplest example of the <span class="code-within-text">for</span> loop.
+        It includes the <span class="code-within-text">break</span> keyword.
+        You can read more about this a bit below in the last sub-section.
+    </p>
     <div class="code">
         for (int i = 0; i < 10; i++)<br />
         {<br />
@@ -74,15 +79,79 @@
     <br />
     <div class="working-code">
         Oreo<br />Kropek<br />Piszczek<br />Onyx<br />Lapis<br />Ruby
-
+    </div>
+    <br />
+    <p>To reassign variable's value:</p>
+    <div class="code">
+        string[] petNames = { "Ruby", "Lapis", "Onyx", "Piszczek", "Kropek", "Snickers" };<br />
+        for (int i = 0; i < petNames.Length; i ++)<br />
+        &emsp;{<br />
+        &emsp;if (petNames[i] == "Snickers")<br />
+        &emsp;{<br />
+        &emsp;&emsp;petNames[i] = "Oreo";<br />
+        &emsp;&emsp;Console.WriteLine(petNames[i]);<br />
+        &emsp;}<br />
+        &emsp;else<br />
+        &emsp;{<br />
+        &emsp;&emsp;Console.WriteLine(petNames[i]);<br />
+        &emsp;}<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        Ruby<br />
+        Lapis<br />
+        Onyx<br />
+        Piszczek<br />
+        Kropek<br />
+        Oreo
     </div>
     <br />
 
     <h2>While & Do-While</h2>
+    <h3>While</h3>
+    <div class="code">
+        int i = 0;<br />
+        while (i < 5)<br />
+        {<br />
+        &emsp;Console.WriteLine(i);<br />
+        &emsp;i++;<br />
+        }
+    </div><br />
+    <div class="working-code">
+        0<br />
+        1<br />
+        2<br />
+        3<br />
+        4
+    </div>
+    <p>
+        It's very important to remember to increase the variable used in the condition,
+        or else the loop will never end.
+    </p>
+    <h3>Do-While</h3>
+    <div class="code">
+        int i = 0;<br />
+        do<br />
+        {<br />
+        &emsp;Console.WriteLine(i);<br />
+        &emsp;i++;<br />
+        }<br />
+        while (i < 5);
+    </div>
+    <br />
+    <div class="working-code">
+        0<br />
+        1<br />
+        2<br />
+        3<br />
+        4
+    </div>
+    <br />
 
     <h2>Break & Continue</h2>
 
-    
+
 
     <br />
     <hr />
