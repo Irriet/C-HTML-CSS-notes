@@ -40,8 +40,10 @@
             <tr>
                 <td>@</td>
                 <td>Creates literal string</td>
-                <td class="code-in-table" style="text-align: left">Console.WriteLine(@"&emsp;Tab here. 
-                Tab there. &emsp; Tabs, new lines and / \ / \ symbols are displayed&emsp;.");</td>
+                <td class="code-in-table" style="text-align: left">
+                    Console.WriteLine(@"&emsp;Tab here.
+                    Tab there. &emsp; Tabs, new lines and / \ / \ symbols are displayed&emsp;.");
+                </td>
                 <td class="working-code-in-table" style="text-align: left">
                     &emsp;Tab here.
                     Tab there. &emsp; Tabs, new lines and / \ / \ symbols are displayed&emsp;.
@@ -49,26 +51,98 @@
             </tr>
         </tbody>
     </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <br />
+    <h2>Unicode characters</h2>
+    To add unicode characters, you need to write a \u and a corresponding code.
+    It's useful for writting in other languages and inserting special characters. For example:
+    <div class="code">
+        // Kon'nichiwa<br />
+        Console.WriteLine("\u3053\u3093\u306B\u3061\u306F");
+    </div>
+    <br />
+    <div class="working-code">
+        こんにちは
+    </div>
+    <br />
 
     <h2>Methods for strings</h2>
-    
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Code example</th>
+                <th>Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>.Remove()</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+            <tr>
+                <td>.Replace()</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+            <tr>
+                <td>.Split()</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+            <tr>
+                <td>.ToCharArray()</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+            <tr>
+                <td>.ToLower()</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+            <tr>
+                <td>.ToUpper</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+            <tr>
+                <td>.Trim()</td>
+                <td class="code-in-table" style="text-align: left">ADD TRIMMING FROM NOTEBOOK</td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <h2>Methods for strings that return boolean values</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Code example</th>
+                <th>Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>.Contains()</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+            <tr>
+                <td>.EndsWith()</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+            <tr>
+                <td>.StartsWith()</td>
+                <td class="code-in-table" style="text-align: left"></td>
+                <td class="working-code-in-table" style="text-align: left"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+
+
     ///Trimming from notebook!!///
     <br />
     <hr />
