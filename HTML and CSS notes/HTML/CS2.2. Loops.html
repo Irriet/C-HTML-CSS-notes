@@ -150,9 +150,53 @@
     <br />
 
     <h2>Break & Continue</h2>
-
-
-
+    <h3>Break</h3>
+    <span class="code-within-text">break</span> can be used in a <span class="code-within-text">switch</span> statement, like shown in the <a href="CS2.1. Logic.html" class="small-link">Logic</a> section.
+    It also functions in all sorts of loops, as a statement used to jump out of a loop.
+    In the code below, the loop will end once i is equal 4.
+    <div class="code">
+        for (int i = 0; i < 7; i++)<br />
+        {<br />
+        &emsp;if (i == 4)<br />
+        &emsp;{<br />
+        &emsp;&emsp;break;<br />
+        &emsp;}<br />
+        &emsp;Console.WriteLine(i);<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        0<br />
+        1<br />
+        2<br />
+        3<br />
+    </div>
+    <br />
+    It's worth noting that depending on where you put the <span class="code-within-text">break</span> statement
+    the output will or will not contain the number 4. If you put <span class="code-within-text">break</span> after <span class="code-within-text">Console.WriteLine(i)</span>
+    the number 4 will still be printed out.
+    <br />
+    <h3>Continue</h3>
+    The <span class="code-within-text">continue</span> statement breaks one iteration in the loop upon meeting a certain condition, but continues with the next iteration.
+    <div class="code">
+        for (int i = 0; i < 7; i++)<br />
+        {<br />
+        &emsp;if (i == 4)
+        &emsp;{<br />
+        &emsp;&emsp;continue;<br />
+        &emsp;}<br />
+        &emsp;Console.WriteLine(i);<br />
+        }<br />
+    </div>
+    <br />
+    <div class="working-code">
+        0<br />
+        1<br />
+        2<br />
+        3<br />
+        5<br />
+        6
+    </div>
     <br />
     <hr />
     <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
