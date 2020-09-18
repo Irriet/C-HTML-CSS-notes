@@ -77,38 +77,134 @@
         <tbody>
             <tr>
                 <td>.Remove()</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string example = "This is an example.";<br />
+                    string oneIntRemove = example.Remove(7);<br />
+                    string twoIntRemove = example.Remove(7, 8);<br />
+                    Console.WriteLine($"Base sentence: {example} \nFirst remove: {oneIntRemove} \nSecond remove:{twoIntRemove}");
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    Base sentence: This is an example.<br />
+                    First remove: This is<br />
+                    Second remove:This isple.
+                </td>
             </tr>
             <tr>
                 <td>.Replace()</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string sentence = "There are some fnny mistakes in this not so fnny sentence.";<br />
+                    string fixedSentence = sentence.Replace("fnny", "funny");<br />
+                    Console.WriteLine($"Before: {sentence} \nAfter: {fixedSentence}");
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    Before: There are some fnny mistakes in this not so fnny sentence.<br />
+                    After: There are some funny mistakes in this not so funny sentence.
+                </td>
             </tr>
             <tr>
                 <td>.Split()</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string code = "BL-01-S";<br />
+                    string[] codeComponents = code.Split("-");<br />
+                    Console.WriteLine($"This is the code: {code}. \nAnd these are the code components: ");<br />
+                    foreach (var component in codeComponents)<br />
+                    {<br />
+                    &emsp;Console.WriteLine(component);<br />
+                    }
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    This is the code: BL-01-S.<br />
+                    And these are the code components:<br />
+                    BL<br />
+                    01<br />
+                    S
+                </td>
             </tr>
             <tr>
                 <td>.ToCharArray()</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string lettersAndNumbers = "abc123";<br />
+                    char[] arrayOfChars = lettersAndNumbers.ToCharArray();<br />
+                    Console.WriteLine($"This is the string: {lettersAndNumbers}.");<br />
+                    Console.WriteLine("\nThis is the method with an empty parenthesis:");<br />
+                    foreach (var chars in arrayOfChars)<br />
+                    {<br />
+                    &emsp;Console.WriteLine(chars);<br />
+                    }
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    This is the string: abc123.<br /><br />
+
+                    This is the method with an empty parenthesis:<br />
+                    a<br />
+                    b<br />
+                    c<br />
+                    1<br />
+                    2<br />
+                    3
+                </td>
+            </tr>
+            <tr>
+                <td>.ToCharArray()</td>
+                <td class="code-in-table" style="text-align: left">
+                    string lettersAndNumbers = "abc123";<br />
+                    char[] arrayOfCharsPartTwo = lettersAndNumbers.ToCharArray(2, 2);<br />
+                    Console.WriteLine($"This is the string: {lettersAndNumbers}.");<br />
+                    Console.WriteLine("\nThis is when we start from index 2 and put 2 characters in the array:");<br />
+                    foreach (var chara in arrayOfCharsPartTwo)<br />
+                    {<br />
+                    Console.WriteLine(chara);<br />
+                    }
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    This is the string: abc123.<br /><br />
+
+                    This is when we start from index 2 and put 2 characters in the array:<br />
+                    c<br />
+                    1
+                </td>
             </tr>
             <tr>
                 <td>.ToLower()</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string sentence = "This is an ExaMPLE of sentenCE that needs HeLp.";<br />
+                    Console.WriteLine($"Before: {sentence} \nAfter: {sentence.ToLower()}");
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    Before: This is an ExaMPLE of sentenCE that needs HeLp.<br />
+                    After: this is an example of sentence that needs help.
+                </td>
             </tr>
             <tr>
                 <td>.ToUpper</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string sentence = "This sentence is meant to be SCREAMED out loud!!!";<br />
+                    Console.WriteLine($"Before: {sentence} \nAfter: {sentence.ToUpper()}");
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    Before: This sentence is meant to be SCREAMED out loud!!!<br />
+                    After: THIS SENTENCE IS MEANT TO BE SCREAMED OUT LOUD!!!
+                </td>
             </tr>
             <tr>
                 <td>.Trim()</td>
-                <td class="code-in-table" style="text-align: left">ADD TRIMMING FROM NOTEBOOK</td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string value1 = " a   ";<br />
+                    string value2 = "        a ";<br />
+                    Console.WriteLine(value1 == value2);<br />
+                    Console.WriteLine(value1.Trim() == value2.Trim());
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    False<br />
+                    True
+                </td>
+            </tr>
+            <tr>
+                <td>.Trim()</td>
+                <td class="code-in-table" style="text-align: left">
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                </td>
             </tr>
         </tbody>
     </table>
@@ -125,25 +221,47 @@
         <tbody>
             <tr>
                 <td>.Contains()</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string sentence = "Rubin is a cute rat.";<br />
+                    Console.WriteLine(sentence.Contains("cute"));
+                </td>
+                <td class="working-code-in-table" style="text-align: left">True</td>
             </tr>
             <tr>
                 <td>.EndsWith()</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string[] sentences = { "Cats are cute.", "Good morning!", "No, why?" };<br />
+                    foreach (var words in sentences)<br />
+                    {<br />
+                    &emsp;bool endsWithPeriod = words.EndsWith(".");<br />
+                    &emsp;Console.WriteLine($"\"{words}\" ends with period: {endsWithPeriod}");<br />
+                    }<br />
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    "Cats are cute." ends with period: True<br />
+                    "Good morning!" ends with period: False<br />
+                    "No, why?" ends with period: False
+                </td>
             </tr>
             <tr>
                 <td>.StartsWith()</td>
-                <td class="code-in-table" style="text-align: left"></td>
-                <td class="working-code-in-table" style="text-align: left"></td>
+                <td class="code-in-table" style="text-align: left">
+                    string[] sentences = { "hey there.", "Hello World!", "You're nice." };<br />
+                    foreach (var words in sentences)<br />
+                    {<br />
+                    &emsp;bool startsWithH = words.StartsWith("H");<br />
+                    &emsp;Console.WriteLine($"\"{words}\" starts with H: {startsWithH}");<br />
+                    }
+                </td>
+                <td class="working-code-in-table" style="text-align: left">
+                    "hey there." starts with H: False<br />
+                    "Hello World!" starts with H: True<br />
+                    "You're nice." starts with H: False
+                </td>
             </tr>
         </tbody>
     </table>
     <br />
-
-
-    ///Trimming from notebook!!///
     <br />
     <hr />
     <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
