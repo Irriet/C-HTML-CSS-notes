@@ -7,9 +7,90 @@
     <title>Notes on C# - Converting data types</title>
 </head>
 <body>
+    <h2>Widening and narrowing conversion</h2>
+    A widening conversion occurs when a value is converted to another type that is of equal or greater size, like int64 to double.
+    A narrowing conversion occurs when a value is converted to another one that is of a smaller size, like int32 to uint32
+    
+    <h1>Implicit data conversion</h1>
+    Implicit conversion is done in a type-safe manner, meaning that it's always conversions from smaller to larger 
+    integral types and conversions from derived classes to base classes.<br />
+    Click here for: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/numeric-conversions" class="small-link">Built in implicit type conversions</a>
+    <br /><br />
+    <div class="code">
+        int num1 = 24;<br />
+        double num2 = num1;
+    </div>
+    <h1>Explicit data conversion</h1>
+    Explicit conversions require a bit more effort from the user.
+    <h2>Casting</h2>
+    To cast a value into another type, you need to write the desired type name in brackets in front of the value that you want to convert. 
+    It's worth noting that casting like this doesn't round the numbers properly, it just cuts the digits that stand for fraction. <br />
+    <br />
+    The general idea in casting is: (type of data)variableThatGetsConverted
+    <br /><br />
+    <div class="code">
+        decimal num1 = 3.14m;<br />
+        int num2 = (int)num1;<br />
+        Console.WriteLine("Decimal: {0} \nint: {1}", num1, num2);<br />
+        <br />
+        decimal num3 = 3.68m;<br />
+        int num4 = (int)num3;<br />
+        Console.WriteLine("Decimal: {0} \nint: {1}", num3, num4);
+    </div><br />
+    <div class="working-code">
+        Decimal: 3,14<br />
+        int: 3<br />
+        Decimal: 3,68<br />
+        int: 3<br />
+    </div>
 
+    <h2>ToInt and others</h2>
+    .ToInt32() and other methods of that type round out the numbers. 
+    <div class="code">
+        int value1 = (int)1.5m;<br />
+        int value2 = Convert.ToInt32(1.5m);<br />
+        Console.WriteLine("1.5 to int: \nCasting: {0} \nConvert.ToInt32: {1}", value1, value2);
+    </div>
+    <br />
+    <div class="working-code">
+        1.5 to int:<br />
+        Casting: 1<br />
+        Convert.ToInt32: 2
+    </div>
 
-
+    <br />
+    <h2>Parse and TryParse</h2>
+    <h3>Parse</h3>
+    Parse is used to convert a string representation of a number to an int. 
+    <div class="code">
+        string number = "14";<br />
+        int num1 = int.Parse(number);
+    </div>
+    <br />
+    <h3>TryParse</h3>
+    TryParse returns a logical value indicating whether the operation succeeded or not. 
+    Before calling the TryParse method, it is necessary to initiate a variable (which 
+    will store the result) before the if statement. If you do this, you can use the variable outside of the if code block. 
+    <br />
+    The general rule for using TryParse is: <br />
+    TryParse(string s, out int result)
+    <br />
+    <div class="code">
+        string value = "56";<br />
+        int result = 0;<br />
+        if (int.TryParse(value, out result))<br />
+        {<br />
+        &emsp;Console.WriteLine($"Measurement: {result}");<br />
+        }<br />
+        else<br />
+        {<br />
+        &emsp;Console.WriteLine("Unable to report measurement");<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        Measurement: 56
+    </div>
     <br />
     <hr />
     <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
