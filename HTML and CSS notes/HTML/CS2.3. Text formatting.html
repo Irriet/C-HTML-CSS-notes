@@ -202,8 +202,16 @@
             <tr>
                 <td>.Trim()</td>
                 <td class="code-in-table" style="text-align: left">
+                    char[] charsToTrim = { ' ', '*', '#' };<br />
+                    string banner = "  **#Rats are Awesome!#**  ";<br />
+                    string result = banner.Trim(charsToTrim);<br />
+                    Console.WriteLine("Trimmed \n{0} \nto \n{1}", banner, result);
                 </td>
                 <td class="working-code-in-table" style="text-align: left">
+                    Trimmed<br />
+                    **#Rats are Awesome!#**<br />
+                    to<br />
+                    Rats are Awesome!
                 </td>
             </tr>
         </tbody>
