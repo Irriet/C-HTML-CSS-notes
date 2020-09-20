@@ -7,7 +7,23 @@
     <title>Notes on C# - Basic maths</title>
 </head>
 <body>
-
+    <h1>Basic maths</h1>
+    <h2>Brackets are important</h2>
+    The programming language doesn't know what you mean unless you're very specific.<br />
+    Example of simple math gone wrong is presented below (the third line) with a solution of the problem (the fourth line):<br /><br />
+    <div class="code">
+        int widgetsSold = 6;<br />
+        string firstName = "Tom";<br />
+        Console.WriteLine(firstName + " sold " + widgetsSold + 7 + " widgets.");<br />
+        Console.WriteLine(firstName + " sold " + (widgetsSold + 7) + " widgets.");
+    </div>
+    <br />
+    <div class="working-code">
+        Tom sold 67 widgets.<br />
+        Tom sold 13 widgets.
+    </div>
+    <br />
+    <h2>Basic operators</h2>
 
 
     <br />
