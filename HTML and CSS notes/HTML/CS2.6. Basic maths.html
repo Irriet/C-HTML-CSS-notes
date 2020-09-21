@@ -24,7 +24,128 @@
     </div>
     <br />
     <h2>Basic operators</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Operator</th>
+                <th>What it does</th>
+                <th>Example of code</th>
+                <th>Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>+</td>
+                <td>addition</td>
+                <td class="code-in-table">Console.WriteLine(5 + 6);</td>
+                <td class="working-code-in-table">11</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>substraction</td>
+                <td class="code-in-table">Console.WriteLine(5 - 6);</td>
+                <td class="working-code-in-table">-1</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>multiplication</td>
+                <td class="code-in-table">Console.WriteLine(5 * 6);</td>
+                <td class="working-code-in-table">30</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>division</td>
+                <td class="code-in-table">Console.WriteLine(51.0m / 6);</td>
+                <td class="working-code-in-table">8.5</td>
+            </tr>
+            <tr>
+                <td>x++</td>
+                <td>displays x and then adds 1, visible upon next displaying</td>
+                <td class="code-in-table">
+                    double a = 1.5;<br />
+                    Console.WriteLine(a);<br />
+                    Console.WriteLine(a++);<br />
+                    Console.WriteLine(a);<br />
+                </td>
+                <td class="working-code-in-table">
+                    1,5<br />
+                    1,5<br />
+                    2,5
+                </td>
+            </tr>
+            <tr>
+                <td>++x</td>
+                <td>adds 1 and displays the incremented value right away</td>
+                <td class="code-in-table">
+                    double a = 1.5;<br />
+                    Console.WriteLine(a);<br />
+                    Console.WriteLine(++a);<br />
+                    Console.WriteLine(a);
+                </td>
+                <td class="working-code-in-table">
+                    1,5<br />
+                    2,5<br />
+                    2,5
+                </td>
+            </tr>
+            <tr>
+                <td>x--</td>
+                <td>displays x and then decrements by 1, visible upon next displaying</td>
+                <td class="code-in-table">
+                    int i = 3;<br />
+                    Console.WriteLine(i);<br />
+                    Console.WriteLine(i--);<br />
+                    Console.WriteLine(i);
+                </td>
+                <td class="working-code-in-table">
+                    3<br />
+                    3<br />
+                    2
+                </td>
+            </tr>
+            <tr>
+                <td>--x</td>
+                <td>decrements by 1 and displays the new value right away</td>
+                <td class="code-in-table">
+                    double a = 1.5;<br />
+                    Console.WriteLine(a);<br />
+                    Console.WriteLine(--a);<br />
+                    Console.WriteLine(a);<br />
+                </td>
+                <td class="working-code-in-table">
+                    1,5<br />
+                    0,5<br />
+                    0,5
+                </td>
+            </tr>
+            <tr>
+                <td>x += y</td>
+                <td>increments x by y</td>
+                <td class="code-in-table">
+                    for (int i = 0; i < 30; i += 6)<br />
+                    {<br />
+                    Console.WriteLine(i);<br />
+                    }
+                </td>
+                <td class="working-code-in-table">
+                    0<br />
+                    6<br />
+                    12<br />
+                    18<br />
+                    24
+                </td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>remainder of division</td>
+                <td class="code-in-table">Console.WriteLine(37 % 6);</td>
+                <td class="working-code-in-table">1</td>
+            </tr>
+        </tbody>
 
+
+
+    </table>
 
     <br />
     <hr />
