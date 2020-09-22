@@ -85,6 +85,7 @@
     border: 2px dashed rgb(138, 106, 108);
     background-color: rgb(217, 191, 197);
     padding: 10px;
+    text-align: left;
 }
 
 .working-code-in-table {
@@ -92,6 +93,7 @@
     border: 2px dashed rgb(147, 98, 146);
     background-color: rgb(209, 177, 206);
     padding: 10px;
+    text-align: left;
 }
 
 /*Classes for tables*/

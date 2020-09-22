@@ -34,7 +34,7 @@
         Piszczek
     </div>
     <br />
-    In the example below, the 4 in the square brackets indicates the size of the array. Only 3 elements are added though, the last one remains empty. Upon displaying, the value for an empty int element is by default 0. 
+    In the example below, the 4 in the square brackets indicates the size of the array. Only 3 elements are added though, the last one remains empty. Upon displaying, the value for an empty int element is by default 0.
     <br />
     <div class="code">
         int[] numbers = new int[4];<br />
@@ -55,11 +55,114 @@
         Number: 0.
     </div>
     <br />
-   
-
 
     <h2>Methods for having fun with arrays</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>What it does</th>
+                <th>Code example</th>
+                <th>Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Array.Clear(arrayName, startingIndex, amountOfItems)</td>
+                <td>Clears the values stored in the array - makes them null, but doesn't change the size of the array. The empty values are displayed, but if you try to use a method like .ToLower() an error will pop up</td>
+                <td class="code-in-table">
+                    string[] fruits = { "grapes", "oranges", "apples", "bananas", "figs" };<br />
+                    Array.Clear(fruits, 0, 2);<br />
+                    foreach (string fruit in fruits)<br />
+                    {<br />
+                    Console.WriteLine("-- {0}", fruit);<br />
+                    }
+                </td>
+                <td class="working-code-in-table">
+                    --<br />
+                    --<br />
+                    -- apples<br />
+                    -- bananas<br />
+                    -- figs
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Array.Sort(arrayName)</td>
+                <td>sorts the elements in alphabetical order</td>
+                <td>
+                    string[] pallets = { "B14", "A11", "B12", "A13" };<br />
+                    Array.Sort(pallets);<br />
+                    foreach (var pallet in pallets)<br />
+                    {<br />
+                    Console.WriteLine(pallet);<br />
+                    }
+                </td>
+                <td>
+                    A11<br />
+                    A13<br />
+                    B12<br />
+                    B14
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
 
+
+
+
+
+
+
+
+
+
+
+
+        </tbody>
+
+
+
+
+    </table>
+
+
+
+
+    <h3>Creating arrays from strings</h3>
+
+    <h3>Reversing an array</h3>
+
+    <h3>Sort, clear, resize</h3>
+
+    <h3>Split</h3>
 
 
     <br />
