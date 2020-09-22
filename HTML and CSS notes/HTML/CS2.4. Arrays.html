@@ -7,6 +7,58 @@
     <title>Notes on C# - Arrays</title>
 </head>
 <body>
+    <h1>Arrays</h1>
+    <h2>What are arrays?</h2>
+    Arrays are data structures that can store multiple variables of the same type.
+    To declare an array you need to specify the type of its elements. Arrays can be single-dimensional or multidimensional.
+    The size of an array is defined upon its creation by either stating the number or adding some elements. <br />
+
+    <h2>How to create an array? Index of elements?</h2>
+    Below are some examples of array creating. It is crucial to remember that index numbers of the elements start from 0.<br /><br />
+    <div class="code">
+
+        string[] pets = { "Rubin", "Lapis", "Onyx", "Oreo", "Kropek", "Piszczek"};<br />
+        Console.WriteLine($"The array length is: {pets.Length}. The elements are: ");<br />
+        foreach (string name in pets)<br />
+        {<br />
+        &emsp;Console.WriteLine(name);<br />
+        }
+    </div><br />
+    <div class="working-code">
+        The array length is: 6. The elements are:<br />
+        Rubin<br />
+        Lapis<br />
+        Onyx<br />
+        Oreo<br />
+        Kropek<br />
+        Piszczek
+    </div>
+    <br />
+    In the example below, the 4 in the square brackets indicates the size of the array. Only 3 elements are added though, the last one remains empty. Upon displaying, the value for an empty int element is by default 0. 
+    <br />
+    <div class="code">
+        int[] numbers = new int[4];<br />
+        numbers[0] = 1;<br />
+        numbers[1] = 2;<br />
+        numbers[2] = 3;<br /><br />
+
+        foreach (int number in numbers)<br />
+        {<br />
+        &emsp;Console.WriteLine($"Number: {number}.");<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        Number: 1.<br />
+        Number: 2.<br />
+        Number: 3.<br />
+        Number: 0.
+    </div>
+    <br />
+   
+
+
+    <h2>Methods for having fun with arrays</h2>
 
 
 
