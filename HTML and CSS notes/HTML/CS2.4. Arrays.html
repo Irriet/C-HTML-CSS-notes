@@ -87,15 +87,9 @@
                 </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
                 <td>Array.Sort(arrayName)</td>
                 <td>sorts the elements in alphabetical order</td>
-                <td>
+                <td class="code-in-table">
                     string[] pallets = { "B14", "A11", "B12", "A13" };<br />
                     Array.Sort(pallets);<br />
                     foreach (var pallet in pallets)<br />
@@ -103,7 +97,7 @@
                     Console.WriteLine(pallet);<br />
                     }
                 </td>
-                <td>
+                <td class="working-code-in-table">
                     A11<br />
                     A13<br />
                     B12<br />
@@ -111,58 +105,42 @@
                 </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Array.Reverse(arrayName)</td>
+                <td>Reverses the order of array elements</td>
+                <td class="code-in-table">
+                    string drink = "Raspberry Juice";<br />
+                    char[] drinkArray = drink.ToCharArray();<br />
+                    Array.Reverse(drinkArray);<br />
+                    string result = new string(drinkArray);<br />
+                    Console.WriteLine(result);
+                </td>
+                <td class="working-code-in-table">eciuJ yrrebpsaR</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Array.Resize(ref arrayName, newSize</td>
+                <td>Resizes the array</td>
+                <td class="code-in-table">
+                    string sentence = "Raspberry juice is healthy as long as it's not sweetened too much.";<br />
+                    string[] words = sentence.Split(' ');<br />
+                    Array.Resize(ref words, 4);<br />
+                    foreach(var word in words)<br />
+                    {<br />
+                    Console.WriteLine(word);<br />
+                    }
+                </td>
+                <td class="working-code-in-table">
+                    Raspberry<br />
+                    juice<br />
+                    is<br />
+                    healthy
+                </td>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
-
-
-
-
-
-
-
-
-
-
-
         </tbody>
-
-
-
-
     </table>
 
 
+    <h3>Creating arrays from strings - .ToCharArray & .Split</h3>
 
-
-    <h3>Creating arrays from strings</h3>
-
-    <h3>Reversing an array</h3>
-
-    <h3>Sort, clear, resize</h3>
-
-    <h3>Split</h3>
 
 
     <br />
