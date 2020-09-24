@@ -192,8 +192,13 @@
         Console.WriteLine("It's not null");<br />
         }
     </div>
-    <br />
 
+    <h4>Is there a way to remove null elements?</h4>
+    Not really. Array.Resize() doesn't do that, there's no other method to really do that. 
+    The best way of achieving this goal is counting the elements that have values different than null by iterating 
+    through the elements and incrementing the counter - a variable. Then you can create a second array of the counter's size 
+    and loop the elements from the original array to copy the values different than null ones to the new array. 
+    <br />
     <h4>Connecting array elements back together (.Split(), .ToCharArray())</h4>
     Either use the String.Join() method, if you want some symbols to be added in between or simply do this:<br /><br />
     <div class="code">string connectedArray = new string(wordArray);</div>
