@@ -117,7 +117,7 @@
                 <td class="working-code-in-table">eciuJ yrrebpsaR</td>
             </tr>
             <tr>
-                <td>Array.Resize(ref arrayName, newSize</td>
+                <td>Array.Resize(ref arrayName, newSize) *</td>
                 <td>Resizes the array</td>
                 <td class="code-in-table">
                     string sentence = "Raspberry juice is healthy as long as it's not sweetened too much.";<br />
@@ -135,15 +135,70 @@
                     healthy
                 </td>
             </tr>
+            <tr>
+                <td>arrayName.ToCharArray()</td>
+                <td>turns string into an array of single chars</td>
+                <td class="code-in-table">
+                    string word = "rats";<br />
+                    char[] arrayOfWord = word.ToCharArray();<br />
+                    foreach (char letter in arrayOfWord)<br />
+                    {<br />
+                    Console.WriteLine(letter);<br />
+                    }
+                </td>
+                <td class="working-code-in-table">
+                    r<br />
+                    a<br />
+                    t<br />
+                    s
+                </td>
+            </tr>
+            <tr>
+                <td>stringName.Split('charThatSplits')</td>
+                <td>Splits the string into an array, a chosen char decides where one element ends and another starts</td>
+                <td class="code-in-table">
+                    string words = "pet-rats-are-awesome";<br />
+                    string[] arrayOfWords = words.Split('-');<br />
+                    foreach (string word in arrayOfWords)<br />
+                    {<br />
+                    Console.WriteLine(word);<br />
+                    }
+                </td>
+                <td class="working-code-in-table">
+                    pet<br />
+                    rats<br />
+                    are<br />
+                    awesome
+                </td>
+            </tr>
+            <tr>
+                <td>String.Join("symbolHere", arrayName)</td>
+                <td>Concatenates array elements by adding a chosen symbol</td>
+                <td class="code-in-table">
+                    string word = "pomelo";<br />
+                    char[] wordArray = word.ToCharArray();<br />
+                    string result = String.Join(',', wordArray);<br />
+                    Console.WriteLine(result);
+                </td>
+                <td class="working-code-in-table">p,o,m,e,l,o</td>
+            </tr>
         </tbody>
     </table>
-
-
-    <h3>Creating arrays from strings - .ToCharArray & .Split</h3>
-
-
-
+    <br />* to check whether the array's element isn't null, you can use something like this:<br />
     <br />
+    <div class="code">
+        if (words[4] != null)<br />
+        {<br />
+        Console.WriteLine("It's not null");<br />
+        }
+    </div>
+    <br />
+
+    <h4>Connecting array elements back together (.Split(), .ToCharArray())</h4>
+    Either use the String.Join() method, if you want some symbols to be added in between or simply do this:<br /><br />
+    <div class="code">string connectedArray = new string(wordArray);</div>
+
+    <br /><br />
     <hr />
     <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
 </body>
