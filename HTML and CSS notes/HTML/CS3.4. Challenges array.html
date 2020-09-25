@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="../HTML/Stylesheet1.css" />
+    <meta charset="utf-8" />
+    <title>Notes on C# - Array Challenges</title>
+</head>
+<body>
+    <h1>Array Challenges</h1>
+    <h2>Removing null elements from an array</h2>
+    <div class="code">
+        string[] numbers = { "1", "2", "3", "4", "5"};<br />
+        Array.Resize(ref numbers, 7);<br />
+        <br />
+        Console.WriteLine("Resized array:");<br />
+        <br />
+        foreach (string num in numbers)<br />
+        {<br />
+        &emsp;Console.WriteLine($"-- {num}");<br />
+        }<br />
+
+        int counter = 0;<br />
+        for (int i = 0; i < numbers.Length; i++)<br />
+        &emsp;if (numbers[i] != null)<br />
+        &emsp;{<br />
+        &emsp;&emsp;counter++;<br />
+        &emsp;}<br />
+        <br />
+        string[] noNullArray = new string[counter];<br />
+        for (int i = 0; i < noNullArray.Length; i++) <br />
+        { <br />
+        &emsp;if (numbers[i] != null) <br />
+        &emsp;&emsp;noNullArray[i] = numbers[i]; <br />
+        &emsp;else<br />
+        &emsp;&emsp;continue;<br />
+        } <br />
+        <br />
+        Console.WriteLine("New array:");<br />
+        <br />
+        foreach(string element in noNullArray)<br />
+        {<br />
+        &emsp;Console.WriteLine($"-- {element}");<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        Resized array:<br />
+        -- 1<br />
+        -- 2<br />
+        -- 3<br />
+        -- 4<br />
+        -- 5<br />
+        --<br />
+        --<br />
+        New array:<br />
+        -- 1<br />
+        -- 2<br />
+        -- 3<br />
+        -- 4<br />
+        -- 5
+    </div>
+
+
+
+    <br />
+    <hr />
+    <a href="CS3. Challenges.html" class="small-link">Click here to return</a>
+</body>
+</html>
