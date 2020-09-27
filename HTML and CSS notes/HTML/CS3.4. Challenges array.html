@@ -12,32 +12,41 @@
     <div class="code">
         string[] numbers = { "1", "2", "3", "4", "5"};<br />
         Array.Resize(ref numbers, 7);<br />
+        Array.Resize(ref numbers, 16);<br />
+        numbers[13] = "57";<br />
+        numbers[15] = "54";<br />
+        numbers[10] = "76";<br />
         <br />
-        Console.WriteLine("Resized array:");<br />
-        <br />
+        //listing the resized array<br />
+        &emsp;Console.WriteLine("Resized array:");<br />
         foreach (string num in numbers)<br />
         {<br />
         &emsp;Console.WriteLine($"-- {num}");<br />
         }<br />
-
+        <br />
+        //counting the new array's size<br />
         int counter = 0;<br />
         for (int i = 0; i < numbers.Length; i++)<br />
-        &emsp;if (numbers[i] != null)<br />
-        &emsp;{<br />
+        &emsp; if (numbers[i] != null)<br />
+        &emsp; {<br />
         &emsp;&emsp;counter++;<br />
         &emsp;}<br />
         <br />
+        //creating new array<br />
         string[] noNullArray = new string[counter];<br />
-        for (int i = 0; i < noNullArray.Length; i++) <br />
-        { <br />
-        &emsp;if (numbers[i] != null) <br />
-        &emsp;&emsp;noNullArray[i] = numbers[i]; <br />
+        int iterator = 0;<br />
+        <br />
+        foreach (string number in numbers)<br />
+        {<br />
+        &emsp;if (number != null)<br />
+        &emsp;{ noNullArray[iterator] = number;<br />
+        &emsp;&emsp;iterator++;<br />
+        &emsp;}<br />
         &emsp;else<br />
         &emsp;&emsp;continue;<br />
-        } <br />
-        <br />
+        }<br /><br />
+        //listing new array<br />
         Console.WriteLine("New array:");<br />
-        <br />
         foreach(string element in noNullArray)<br />
         {<br />
         &emsp;Console.WriteLine($"-- {element}");<br />
@@ -45,7 +54,7 @@
     </div>
     <br />
     <div class="working-code">
-        Resized array:<br />
+        Resized array:
         -- 1<br />
         -- 2<br />
         -- 3<br />
@@ -53,12 +62,24 @@
         -- 5<br />
         --<br />
         --<br />
+        --<br />
+        --<br />
+        --<br />
+        -- 76<br />
+        --<br />
+        --<br />
+        -- 57<br />
+        --<br />
+        -- 54<br />
         New array:<br />
         -- 1<br />
         -- 2<br />
         -- 3<br />
         -- 4<br />
-        -- 5
+        -- 5<br />
+        -- 76<br />
+        -- 57<br />
+        -- 54
     </div>
 
 
