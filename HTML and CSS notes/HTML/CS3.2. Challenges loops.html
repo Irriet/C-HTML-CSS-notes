@@ -9,6 +9,8 @@
 <body>
     <h1>Loop Challenges</h1>
     <h2>Sum of array elements</h2>
+    You can do that using any sort of loop. The results of codes presented below are all the same.
+    <h3>With Foreach</h3>
     <div class="code">
         decimal[] prices = { 12.50m,  19.84m, 51.63m, 98.98m, 32.45m, 57.00m };<br />
         decimal sum = 0;<br />
@@ -32,7 +34,37 @@
         Item nr 6: 57,00$, sum: 272,40$<br />
         Total is: 272,40$.
     </div>
-
+    <br />
+    <h3>With For</h3>
+    <div class="code">
+        decimal[] prices = { 12.50m, 19.84m, 51.63m, 98.98m, 32.45m, 57.00m };<br />
+        decimal sum = 0;<br />
+        int counter = 0;<br />
+        <br />
+        for (int i = 0; i < prices.Length; i++)<br />
+        {<br />
+        &emsp;sum += prices[i];<br />
+        &emsp;counter++;<br />
+        &emsp;Console.WriteLine($"Item nr {counter}: {prices[i]}$, sum: { sum}$");<br />
+        }<br />
+        Console.WriteLine($"Total is: {sum}$.");<br />
+    </div>
+    <br />
+    <h3>While</h3>
+    <div class="code">
+        decimal[] prices = { 12.50m, 19.84m, 51.63m, 98.98m, 32.45m, 57.00m };<br />
+        decimal sum = 0;<br />
+        int counter = 0;<br />
+        <br />
+        while (counter < prices.Length)<br />
+        {<br />
+        sum += prices[counter];<br />
+        Console.WriteLine($"Item nr {counter + 1}: {prices[counter]}$, sum: { sum}$");<br />
+        counter++;<br />
+        }<br />
+        Console.WriteLine($"Total is: {sum}$.");
+    </div>
+    <br />
 
     <br />
     <hr />
