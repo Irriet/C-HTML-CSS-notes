@@ -8,8 +8,30 @@
 </head>
 <body>
     <h1>Loop Challenges</h1>
-    
-
+    <h2>Sum of array elements</h2>
+    <div class="code">
+        decimal[] prices = { 12.50m,  19.84m, 51.63m, 98.98m, 32.45m, 57.00m };<br />
+        decimal sum = 0;<br />
+        int counter = 0;<br />
+        <br />
+        foreach (decimal num in prices)<br />
+        {<br />
+        &emsp;sum += num;<br />
+        &emsp;counter++;<br />
+        &emsp;Console.WriteLine($"Item nr {counter}: {num}$, sum: {sum}$");<br />
+        }<br />
+        Console.WriteLine($"Total is: {sum}$.");
+    </div>
+    <br />
+    <div class="working-code">
+        Item nr 1: 12,50$, sum: 12,50$<br />
+        Item nr 2: 19,84$, sum: 32,34$<br />
+        Item nr 3: 51,63$, sum: 83,97$<br />
+        Item nr 4: 98,98$, sum: 182,95$<br />
+        Item nr 5: 32,45$, sum: 215,40$<br />
+        Item nr 6: 57,00$, sum: 272,40$<br />
+        Total is: 272,40$.
+    </div>
 
 
     <br />
