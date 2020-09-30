@@ -82,6 +82,46 @@
         The number has appeared 5 times.
     </div>
     <br />
+    <h2>Finding the highest number in an array</h2>
+    <div class="code">
+        int[] numbers = { 3, 56, 74, 35, 87, 101, 34, 65, 5, 8, 18, 93 };<br />
+        int highNum = 0;<br />
+        <br />
+        foreach (int number in numbers)<br />
+        {<br />
+        &emsp;if (number > highNum)<br />
+        &emsp;{<br />
+        &emsp;&emsp;highNum = number;<br />
+        &emsp;}<br />
+        &emsp;else<br />
+        &emsp;&emsp;continue;<br />
+        }<br />
+        Console.WriteLine($"The highest number is: {highNum}.");
+    </div>
+    <br />
+    <div class="working-code">
+        The highest number is: 101.
+    </div>
+    <br />
+    <h2>Finding the lowest number in an array</h2>
+    <div class="code">
+        int[] numbers = { 3, 56, -64, 74, 35, -10, 87, 101, 34, 65, 5, 8, 18, 93 };<br />
+        int lowNum = numbers[0];<br />
+        <br />
+        foreach (int num in numbers)<br />
+        {<br />
+        &emsp;if (num < lowNum)<br />
+        &emsp;&emsp;lowNum = num;<br />
+        &emsp;else<br />
+        &emsp;&emsp;continue;<br />
+        }<br />
+        Console.WriteLine($"The lowest number is: {lowNum}");
+    </div>
+    <br />
+    <div class="working-code">
+        The lowest number is: -64
+    </div>
+
 
 
     <br />
