@@ -194,18 +194,45 @@
     </div>
 
     <h4>Is there a way to remove null elements?</h4>
-    Not really. Array.Resize() doesn't do that, there's no other method to really do that. 
-    The best way of achieving this goal is counting the elements that have values different than null by iterating 
-    through the elements and incrementing the counter - a variable. Then you can create a second array of the counter's size 
-    and loop the elements from the original array to copy the values different than null ones to the new array. 
+    Not really. Array.Resize() doesn't do that, there's no other method to really do that.
+    The best way of achieving this goal is counting the elements that have values different than null by iterating
+    through the elements and incrementing the counter - a variable. Then you can create a second array of the counter's size
+    and loop the elements from the original array to copy the values different than null ones to the new array.
     <br />
     You can find the code example in the <a href="CS3.4. Challenges array.html" class="small-link">array challenges</a>.
     <br />
     <h4>Connecting array elements back together (.Split(), .ToCharArray())</h4>
     Either use the String.Join() method, if you want some symbols to be added in between or simply do this:<br /><br />
     <div class="code">string connectedArray = new string(wordArray);</div>
+    <br />
+    <h2>2d arrays</h2>
+    <div class="code">
+        int[,] numberGrid = { { 1, 2 }, { 3, 4 }, { 5, 6 } };<br />
+        <i>//Access number 1:</i><br />
+        Console.WriteLine(numberGrid[0, 0]);<br />
+        <i>//Access number 5:</i><br />
+        Console.WriteLine(numberGrid[2, 0]);<br />
+    </div>
+    <br />
+    <div class="working-code">
+        1<br />
+        5
+    </div>
+    <p>Other way to initiate a 2d array:</p>
+    <div class="code">int[,] myArray = new int[2, 3];</div>
+    <p>The example will create an array with 2 rows and 3 columns.</p>
 
-    <br /><br />
+
+
+
+
+
+
+
+
+
+
+    <br />
     <hr />
     <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
 </body>
