@@ -64,6 +64,51 @@
     Note the <span class="code-within-text">UsefulTools.</span> part - it marks the fact that the method is in different class and we need to point towards the class to access its method.
     <br />
 
+    <h2>Object methods</h2>
+    <p>Object methods are methods that you can define inside of a class. The objects of that class can use it to find out information or modify information by themselves. 
+    The information returned will always be unique to the object that has called the method.</p>
+    <div class="code">
+        class Student<br />
+        {<br />
+        &emsp;public string name;<br />
+        &emsp;public string major;<br />
+        &emsp;public double gpa;<br />
+        <br />
+        &emsp;public Student(string aName, string aMajor, double aGpa)<br />
+        &emsp;{<br />
+        &emsp;&emsp;name = aName;<br />
+        &emsp;&emsp;major = aMajor;<br />
+        &emsp;&emsp;gpa = aGpa;<br />
+        &emsp;}<br />
+        <br />
+        &emsp;<b>public bool HasHonors()</b> //This is the object method<br />
+        &emsp;{<br />
+        &emsp;&emsp;if (gpa >= 3.5)<br />
+        &emsp;&emsp;{<br />
+        &emsp;&emsp;&emsp;return true;<br />
+        &emsp;&emsp;}<br />
+        &emsp;&emsp;else<br />
+        &emsp;&emsp;{<br />
+        &emsp;&emsp;&emsp;return false;<br />
+        &emsp;&emsp;}<br />
+        &emsp;}<br />
+        }
+        <br />
+        <hr />
+        <br />
+        Student student1 = new Student("Jim", "Business", 2.8);<br />
+        Student student2 = new Student("Pam", "Art", 3.6);<br />
+        <br />
+        Console.WriteLine(student1.HasHonors());<br />
+        Console.WriteLine(student2.HasHonors());<br />
+    </div>
+    <br />
+    <div class="working-code">
+        False<br />
+        True
+    </div>
+
+
     <br />
     <hr />
     <a href="CS2. CS in use.html" class="small-link">Click here to return</a>
