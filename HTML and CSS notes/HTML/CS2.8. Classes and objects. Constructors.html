@@ -7,8 +7,66 @@
     <title>Notes on C# - Classes and Objects. Constructors.</title>
 </head>
 <body>
-
-
+    <h1>Classes and objects. Constructors.</h1>
+    <h2>Classes and objects</h2>
+    <b>Class</b> is a data type that you can define by yourself. <br />
+    <b>Object</b> is an instance of a class. It's an actual physical thing inside of a program. 
+    For example:<br /><br />
+    <div class="code">
+        class Book<br />
+        {<br />
+        &emsp;public string title;<br />
+        &emsp;public string author;<br />
+        &emsp;public int pages;<br />
+        }<br />
+        <hr />
+        static void Main(string[] args)<br />
+        {<br />
+        &emsp;{<br />
+        &emsp;&emsp;Book book1 = new Book();<br />
+        &emsp;&emsp;book1.title = "Harry Potter";<br />
+        &emsp;&emsp;book1.author = "J. K. Rowling";<br />
+        &emsp;&emsp;book1.pages = 400;<br />
+        &emsp;}<br />
+        }
+    </div>
+    <br />
+    <h2>Constructors</h2>
+    <p>Constructors are special methods, which can be put inside of a C# class. 
+    A constructor is going to be called whenever you create an object of that class.</p>
+    <div class="code">
+        class Book<br />
+        {<br />
+        &emsp;public string title;<br />
+        &emsp;public string author;<br />
+        &emsp;public int pages;<br />
+        <br />
+        &emsp;public Book(string aTitle, string aAuthor, int aPages) //this is a constructor<br />
+        &emsp;{<br />
+        &emsp;&emsp;title = aTitle;<br />
+        &emsp;&emsp;author = aAuthor;<br />
+        &emsp;&emsp;pages = aPages;<br />
+        &emsp;}<br />
+        }
+        <br />
+        <hr />
+        <br />
+        class Program<br />
+        {<br />
+        &emsp;static void Main(string[] args)<br />
+        &emsp;{<br />
+        &emsp;&emsp;{<br />
+        &emsp;&emsp;&emsp;Book book1 = new Book("Harry Potter", "J. K. Rowling", 400);<br />
+        &emsp;&emsp;&emsp;Book book2 = new Book("Lord of the Rings", "Tolkien", 700);<br />
+        &emsp;&emsp;&emsp;Console.WriteLine(book2.title);<br />
+        &emsp;&emsp;}<br />
+        &emsp;}<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        Lord of the Rings
+    </div>
 
 
 
