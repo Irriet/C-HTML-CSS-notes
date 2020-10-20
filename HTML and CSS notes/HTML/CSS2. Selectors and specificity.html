@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <link rel="stylesheet" type="text/css" href="../HTML/Stylesheet1.css" />
+    <meta charset="utf-8" />
+    <title>Notes on CSS - Selectors and specificity</title>
+</head>
+<body>
+    <h1>Selectors and specificity</h1>
+    <p>HTML is a structure, while CSS is styling. They're disconnected, so a way to assign the style to proper elements is needed.</p>
+    <p>Selectors are the way to grab and manipulate HTML. There are many different ways to select, however they all provide the same outcome. Different selectors have different uses.</p>
+
+    <h2>Basic selectors</h2>
+    <h3>The element selector (inline)</h3>
+    <p>It targets a single element.</p>
+    <div class="code">
+        (in HTML:)
+        <p>&lt;h2 <b>style="color: pink;"</b>&gt;A good title&lt;/h2&gt;</p>
+    </div>
+
+    <h3>The class selector</h3>
+    <p>Targets elements with a certain class name.</p>
+    <div class="code">
+        (in CSS:)
+        <p>.someclass {color: blue;}<br /></p>
+        (in HTML:)
+        <p>&lt;h2 class="someclass"&gt;A subheading.&lt;/h2&gt;</p>
+    </div>
+
+    <h3>The ID selector</h3>
+    <p>It's about the same as class selector, but by convention it's used on only one element at a time. It will work for more, but generally it's not used this way.</p>
+    <div class="code">
+        (in CSS:)
+        <p>#sometext {color: orange;}</p>
+        (in HTML:)
+        <p>&lt;p id="sometext"&gt;Some text.&lt;/p&gt;</p>
+    </div>
+
+    <h2>Specificity and when to use selectors</h2>
+    <p>Different selectors are more powerful than others. Element selectors are less powerful than class ones, so they get overridden. The general rule is:</p>
+    <p><b>element < class < id < inline styling</b></p>
+
+    <h2>Pseudoselectors</h2>
+    <p>They're commonly used in interactivity with the website - they're only visible when something is done on the website. A good example is hovering.</p>
+    <h3>Hover</h3>
+    <div class="code">
+        h2:hover {<br />
+        color: purple;<br />
+        }<br />
+    </div>
+    <h3>Visited and not visited link</h3>
+    <div class="code">
+        #google-link:link {<br />
+        color: blue;<br />
+        }<br />
+        <br />
+        #google-link:visited {<br />
+        color: red;<br />
+        }
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <br />
+    <hr />
+    <a href="CSS0 Home.html" class="small-link">Click here to return</a>
+</body>
+</html>
