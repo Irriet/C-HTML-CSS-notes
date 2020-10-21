@@ -2,7 +2,7 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
- <link rel="stylesheet" type="text/css" href="../HTML/Stylesheet1.css" />
+    <link rel="stylesheet" type="text/css" href="../HTML/Stylesheet1.css" />
     <meta charset="utf-8" />
     <title>Notes on CSS - Selectors and specificity</title>
 </head>
@@ -40,6 +40,7 @@
     <h2>Specificity and when to use selectors</h2>
     <p>Different selectors are more powerful than others. Element selectors are less powerful than class ones, so they get overridden. The general rule is:</p>
     <p><b>element < class < id < inline styling</b></p>
+    <br /><hr />
 
     <h2>Pseudoselectors</h2>
     <p>They're commonly used in interactivity with the website - they're only visible when something is done on the website. A good example is hovering.</p>
@@ -60,17 +61,140 @@
         }
     </div>
 
+    <h3>First child</h3>
+    <p>Here's an explanation of which child is which:</p>
+    <div class="code">
+        &lt;tr&gt;<br />
+        &emsp;&lt;td>A column&lt;/td&gt; - first child<br />
+        &emsp;&lt;td>Another column&lt;/td&gt; - second child<br />
+        &emsp;&lt;td>Unbelievably, a third one&lt;/td&gt;  - last child<br />
+        &lt;/tr&gt;
+    </div>
+    <p>Below an example of some styling with first child:</p>
+    <div class="code">
+        li:first child {<br />
+        color: green;<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        &lt;ul&gt;<br />
+        &emsp;&lt;li&gt;<span style="color:green">This is the list.</span>&lt;/li&gt;<br />
+        &emsp;&lt;li&gt;This is the list.&lt;/li&gt;<br />
+        &emsp; &lt;li&gt;This is the list.&lt;/li&gt;<br />
+        &emsp;&lt;li&gt;This is the list.&lt;/li&gt;<br />
+        &emsp;&lt;li&gt;This is the list.&lt;/li&gt;<br />
+        &emsp;&lt;ol&gt;<br />
+        &emsp;&emsp;&lt;li&gt;<span style="color:green">It even gets numbered.</span>&lt;/li&gt;<br />
+    &emsp;&emsp;&lt;li&gt;It even gets numbered.&lt;/li&gt;<br />
+    &emsp;&lt;/ol&gt;<br />
+    &lt;/ul&gt;
+</div>
 
+    <h3>Last child</h3>
+    It does the same as first child, but for the last element in the container.
 
+    <h3>N-th child</h3>
+    <p>Affects n-th child.</p>
+    <div class="code">
+        li:nth-child(<b>2</b>) {<br />
+        color: green;<br />
+        }
+    </div>
+    <br />
+    <div class="working-code">
+        &lt;ul&gt;<br />
+        &emsp;&lt;li&gt;This is the list.&lt;/li&gt;<br />
+        &emsp;&lt;li&gt;<span style="color:green">This is the list.</span>&lt;/li&gt;<br />
+    &emsp; &lt;li&gt;This is the list.&lt;/li&gt;<br />
+    &emsp;&lt;li&gt;This is the list.&lt;/li&gt;<br />
+    &emsp;&lt;li&gt;This is the list.&lt;/li&gt;<br />
+    &emsp;&lt;ol&gt;<br />
+    &emsp;&emsp;&lt;li&gt;It even gets numbered.&lt;/li&gt;<br />
+    &emsp;&emsp;&lt;li&gt;<span style="color:green">It even gets numbered.</span>&lt;/li&gt;<br />
+    &emsp;&lt;/ol&gt;<br />
+    &lt;/ul&gt;
+</div>
+    <h3>Only child</h3>
+    <div class="code">
+        li:only-child {<br />
+        color: green;<br />
+        }
+    </div>
+    <p>Note that it won't work if there is more than 1 child.</p>
 
+    <br /><hr />
+    <h2>Advanced selectors</h2>
+    <p>These can contain few selectors at once.</p>
 
+    <h3>Adjacent sibling selector</h3>
+    <p>It targets every single element that directly follows a different element. These will be styled even if they aren't in the same parent element.</p>
+    <p>To colour every anchor tag that follows a h2:</p>
+    <div class="code">
+        h2 + a {<br />
+        color: cornflower blue;<br />
+        }
+    </div>
+    For:
+    <div class="code">
+        &lt;h2 id="services"&gt;Services.&lt;/h2&gt;<br />
+        &lt;a href="https://www.google.com"&gt;Imagine clicking this to go to Google.&lt;/a&gt;
+    </div>
 
+    <h3>General sibling selector</h3>
+    <p>Siblings have to be sharing the same parent. They also have to directly follow each other.</p>
+    <div class="code">
+        Textarea ~ button {<br />
+        color: red;<br />
+        }
+    </div>
+    For:
+    <div class="code">
+        &lt;form&gt;<br />
+        [...]<br />
+        &lt;textarea&gt;&lt;/textarea&gt;<br />
+        &lt;button&gt;Submit&lt;/button&gt;<br />
+        &lt;/form&gt;<br />
+    </div>
 
+    <h3>Child selector</h3>
+    <p>For every single child of some element. For example, for every single li inside of an ul:</p>
+    <div class="code">
+        ul > li {<br />
+        color: red<br />
+        }
+    </div>
+    <p>Note that <span class="code-within-text">li:only-child</span> would be more specific than the ul > li</p>
 
-
-
-
-
+    <hr /><br />
+    <h2>Attribute selector</h2>
+    <p>
+        It's used to select elements that have certain values of attributes.
+        The general rule is: <span class=code-within-text>h2[attribute=value]</span>. So src after img is also an attribute.
+        For example:
+    </p>
+    <div class="code">
+        h2[class=subtitle]{<br />
+        color: blue;<br />
+        }
+    </div>
+    <p>With the code above, every h2 that has a class of subtitle will be affected.</p>
+    <p>
+        Selecting an image with certain source:
+    </p>
+    <div class="code">
+        img[src=”../img/”] {<br />
+        border: 10px solid black;<br />
+        }
+    </div>
+    <p>
+        Instead of simple = sign, you can use variations to get different results.
+    </p>
+    <ul>
+        <li>^= for the path beginning with a certain element</li>
+        <li>$= for a path ending with a certain element</li>
+        <li>*= for a path containing mentioned element anywhere</li>
+    </ul>
     <br />
     <hr />
     <a href="CSS0 Home.html" class="small-link">Click here to return</a>
