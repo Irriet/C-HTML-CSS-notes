@@ -3,6 +3,23 @@
     color: rgb(48, 1, 30);
 }
 
+/*headers*/
+h1 {
+    color: rgb(147, 98, 146);
+}
+
+h2 {
+    color: rgb(147, 98, 146);
+}
+
+h3 {
+    color: rgb(147, 98, 146);
+}
+
+h4 {
+    color: rgb(147, 98, 146);
+}
+
 /*Home-only styles*/
 .home-ul {
     list-style-type: none;
