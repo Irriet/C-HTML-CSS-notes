@@ -1,4 +1,3 @@
 # C-HTML-CSS-notes
 
-This project is a HTML website that contains all of my notes. I've created those while self-teaching C#, HTML and CSS. 
-It's a project that probably won't stop growing any soon, since learning is a never-ending adventure and I want all my basics in one place. 
+This project is a HTML website that contains some of my early notes. It's not finished and it will never be, since I've started a front-end course and I don't see myself spending time doing this. 
